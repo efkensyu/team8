@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">	
+		<th:block th:each="data : ${userDataList}" >
+					<tr th:object="${data}">
+						<td th:text="*{shainCd}"></td>
+						<td th:text="*{shainNm}"></td>
+						<td th:text="*{nenrei}"></td>
+					</tr>
+		</th:block>
+</body>
+</html>
