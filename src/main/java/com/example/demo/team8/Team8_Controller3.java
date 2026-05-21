@@ -15,7 +15,7 @@ public class Team8_Controller3 {
 	
 	@PostMapping(value = "/team8_2-2", params = "next")
 	public String send1(@RequestParam ("question2") String question2) {
-		//↓これはうまく分岐できないときにぜひ使ってね
+		//↓これはうまく分岐できないときに使ってね
 		System.out.println(question2);
 		
 		if (question2.equals("answer1")) {
