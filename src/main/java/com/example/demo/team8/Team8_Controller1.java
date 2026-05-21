@@ -34,4 +34,5 @@ public class Team8_Controller1 {
 		return "team8/team8_starts";
 	}
 	*/
+	//あいうえお
 }
