@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class Team8_Controller2 {
 	@GetMapping("/team8_3_3")
-	public String index() {
+	public String index(@ModelAttribute("empForm") Team8_EmpForm empForm) {
 		System.out.println("getメソッド実行");
 		return "team8/team8_3_3";
 	}
 	
 	
-	@PostMapping(value = "/team8_3-3", params = "next3_3")
-	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_3 empForm, BindingResult result) {
+	@PostMapping(value = "/team8_3-3", params = "next")
+	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm empForm, BindingResult result) {
 		System.out.println("send1メソッド実行");
 		
 		if(result.hasErrors()) {
@@ -36,8 +36,8 @@ public class Team8_Controller2 {
 	
 	
 	
-	@PostMapping(value = "/team8_3_3", params = "back3_3")
-	public String send2() {
+	@PostMapping(value = "/team8_3_3", params = "back")
+	public String send2(@ModelAttribute("empForm") Team8_EmpForm empForm) {
 
 		return "team8/team8_question2_2";
 	}

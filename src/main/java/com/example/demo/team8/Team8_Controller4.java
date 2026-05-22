@@ -35,7 +35,7 @@ public class Team8_Controller4 {
 	
 	
 	@PostMapping(value = "/team8_3-1", params = "back")
-	public String send3() {
+	public String send3(@ModelAttribute("empForm") Team8_EmpForm empForm) {
 		System.out.println("send3実行");
 		return "team8/team8_question2-1";
 	}
