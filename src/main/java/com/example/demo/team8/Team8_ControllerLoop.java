@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class Team8_loop {
+public class Team8_ControllerLoop {
 	@GetMapping("/team8_kekka")
 	public String index() {
 		System.out.println("indexメソッド実行");
