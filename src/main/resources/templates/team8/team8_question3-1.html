@@ -5,13 +5,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>あなたはどっちですか？</h2>
-	<p><input type="radio" name="question3" value="answer1" />
-	おおらかな性格ですか？</p>
-	<p><input type="radio" name="question3" value="answer2" />
-	繊細な性格ですか？</p>
-	<br>
-	<input type="submit" name="back" value="戻る" />
-	<input type="submit" name="next" value="次へ" />
+	<form method="post" th:action="@{/team8_3-1}">
+		<h2>あなたはどっちですか？</h2>
+			<p><input type="radio" name="question3" value="answer1" />
+			おおらかな性格ですか？</p>
+			<p><input type="radio" name="question3" value="answer2" />
+			繊細な性格ですか？</p>
+			<br>
+			<input type="submit" name="back" value="戻る" />
+			<input type="submit" name="next" value="次へ" />
+	</form>
 </body>
 </html>

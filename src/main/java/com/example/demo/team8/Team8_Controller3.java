@@ -16,7 +16,7 @@ public class Team8_Controller3 {
 	@PostMapping(value = "/team8_2-2", params = "next")
 	public String send1(@RequestParam ("question2") String question2) {
 		//↓これはうまく分岐できないときに使ってね
-		System.out.println(question2);
+		//System.out.println(question2);
 		
 		if (question2.equals("answer1")) {
 			return "team8/team8_question3-3";
@@ -30,7 +30,7 @@ public class Team8_Controller3 {
 	
 	@PostMapping(value = "/team8_2-2", params = "back")
 	public String send3() {
-		System.out.println("send3実行");
+		//System.out.println("send3実行");
 		return "team8/team8_question1";
 	}
 }
