@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class Team8_Controller4 {
 	@GetMapping("/team8_3-1")
-	public String index(@ModelAttribute("empForm") Team8_EmpForm3_1 empForm) {
+	public String index(@ModelAttribute("empForm") Team8_EmpForm empForm) {
 		System.out.println("indexメソッド実行");
 		return "team8/team8_question3-1";
 	}
 	
 	@PostMapping(value = "/team8_3-1", params = "next")
-	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_1 empForm, BindingResult result) {
+	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm empForm, BindingResult result) {
 		
 		if (result.hasErrors()) {
 			return "team8/team8_question3-1";

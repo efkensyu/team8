@@ -5,15 +5,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="post" th:action="@{/team8_1}">
+<form method="post" th:action="@{/team8_1}" th:object="${empForm}">
 	<h2>あなたはどっちですか？</h2>
-	<p><input type="radio" name="question1" value="answer1" />
+	<p><input type="radio" th:field="*{question1}" value="answer1" />
 	動画を2倍速で見ますか？</p>
-	<p><input type="radio" name="question1" value="answer2" />
+	<p><input type="radio" th:field="*{question1}" value="answer2" />
 	1倍速で見ますか？</p>
+	<th:block th:if="${#fields.hasErrors('question1')}" th:errors="*{question1}"></th:block>
 	<br>
-	<input type="submit" name="back1" value="戻る" />
-	<input type="submit" name="next1" value="次へ" />
+	<input type="submit" name="back" value="戻る" />
+	<input type="submit" name="next" value="次へ" />
 </form>
 
 </body>

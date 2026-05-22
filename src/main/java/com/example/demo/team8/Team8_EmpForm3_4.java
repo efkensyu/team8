@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 
 @Data
-public class Team8_EmpForm1 {
+public class Team8_EmpForm3_4 {
 	@NotEmpty(message = "どちらかを選んでください！")
-	private String question1;
+	private String question3_4;
 }
