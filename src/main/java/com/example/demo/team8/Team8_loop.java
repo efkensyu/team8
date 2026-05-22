@@ -14,7 +14,7 @@ public class Team8_loop {
 		return "team8/team8_kekka";
 	}
 	
-	@PostMapping("/team8_start")
+	@PostMapping("/team8_kekka")
 	public String send1(@RequestParam String restart, Model model) {
 		model.addAttribute("restart", restart);
 		//↓これはうまく分岐できないときに使ってね
