@@ -1,14 +1,22 @@
 package com.example.demo.team8;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import lombok.RequiredArgsConstructor;
+
 @Controller
+@RequiredArgsConstructor
 public class Team8_Controller5 {
+	private final Team8_Repository2 repository;
+	
 	@GetMapping("/team8_3-2")
 	public String index(@ModelAttribute("empForm") Team8_EmpForm3_2 empForm) {
 		System.out.println("indexメソッド実行");
@@ -16,7 +24,11 @@ public class Team8_Controller5 {
 	}
 	
 	@PostMapping(value = "/team8_3-2", params = "next")
-	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_2 empForm, BindingResult result) {
+	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_2 empForm, BindingResult result, Model model) {
+		
+		//MariaDBのデータから診断結果を表示する
+		List<Team8_Snack> Answer = repository.findById();
+		model.addAttribute("Answer", Answer);
 		
 		if (result.hasErrors()) {
 			return "team8/team8_question3-2";
