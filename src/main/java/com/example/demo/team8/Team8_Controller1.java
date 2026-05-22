@@ -20,17 +20,17 @@ public class Team8_Controller1 {
 		return "team8/team8_question1";
 	}
 	
-	
-	@PostMapping(value = "/team8_1", params = "next1")
-	public String send2(@RequestParam String question1) {
-		System.out.println("send2メソッド実行");
-		if(question1.equals("answer1")) {
-			return "team8/team8_question2-1";
-		}
-		
-		return "team8/team8_question2-2";
-		
-	}
+//	
+//	@PostMapping(value = "/team8_1", params = "next1")
+//	public String send2(@ModelAttribute("empForm") @Validated Team8_EmpFormTemplate empForm, BindingResult result) {
+//		System.out.println("send2メソッド実行");
+//		if(question1.equals("answer1")) {
+//			return "team8/team8_question2-1";
+//		}
+//		
+//		return "team8/team8_question2-2";
+//		
+//	}
 	
 	@PostMapping(value = "/team8_1", params = "next1")
 	public String send3(@RequestParam String question2_1) {
