@@ -27,7 +27,7 @@ public class Team8_Controller1 {
 	@PostMapping(value = "/team8_1", params = "next")
 	public String send2(@ModelAttribute("empForm") @Validated Team8_EmpForm empForm, BindingResult result) {
 		System.out.println("send2メソッド実行");
-		
+		System.out.println(empForm.getQuestion1());
 		
 		if(result.hasErrors()) {
 			return "team8/team8_question1";
