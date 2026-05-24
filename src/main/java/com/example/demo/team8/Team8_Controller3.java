@@ -17,7 +17,7 @@ public class Team8_Controller3 {
 	
 	@PostMapping(value = "/team8_2-2", params = "next")
 	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm empForm, BindingResult result) {
-		
+		System.out.println(result.hasErrors());
 		if (result.hasErrors()) {
 			return "team8/team8_question2-2";
 		}
