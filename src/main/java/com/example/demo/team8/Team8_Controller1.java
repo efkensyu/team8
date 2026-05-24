@@ -54,3 +54,6 @@ public class Team8_Controller1 {
 	}
 	
 }
+
+
+//あいうえお
