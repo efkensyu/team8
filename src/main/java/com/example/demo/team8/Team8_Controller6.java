@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class Team8_Controller6 {
-	@GetMapping("/team8_3-2")
+	@GetMapping("/team8_3-4")
 	public String index(@ModelAttribute("empForm") Team8_EmpForm3_4 empForm) {
 		System.out.println("indexメソッド実行");
 		return "team8/team8_question3-4";
