@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+h1,h2{color: #FF69A3;
+      text-align: center;
+      }
+h1{text-shadow: 5px 5px 2px #FF5192;
+   -webkit-text-stroke: 1px 	#222222;}
+
+input.text1{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 240;
+     padding: 8px 15px;
+    color: #33CCFF;
+    font-weight: 300;
+    border-radius: 30px;
+    box-shadow: 0px 5px 5px;
+            
+            background: }
+
+input:hover{
+    border-bottom: solid 2px #3399FF;
+    transform: scale(1.1)
+            }
