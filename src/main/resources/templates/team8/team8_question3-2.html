@@ -7,9 +7,9 @@
 <body>
 	<form method="post" th:action="@{/team8_3-2}" th:object="${empForm}">
 		<h2>あなたはどっちですか？</h2>
-			<p><input type="radio" th:field="*{question3_2}" value="answer1" />
+			<p><input type="radio" th:field="*{question3_2}" value="S3" />
 			インドア派ですか？</p>
-			<p><input type="radio" th:field="*{question3_2}" value="answer2" />
+			<p><input type="radio" th:field="*{question3_2}" value="S4" />
 			アウトドア派ですか？</p>
 			<th:block th:if="${#fields.hasErrors('question3_2')}" th:errors="*{question3_2}"></th:block>
 			<br>

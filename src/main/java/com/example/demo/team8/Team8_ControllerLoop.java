@@ -10,15 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class Team8_ControllerLoop {
 	@GetMapping("/team8_kekka")
 	public String index() {
-		System.out.println("indexメソッド実行");
+//		System.out.println("indexメソッド実行");
 		return "team8/team8_kekka";
 	}
 	
 	@PostMapping("/team8_kekka")
-	public String send1(@RequestParam String restart, Model model) {
+	public String send(@RequestParam String restart, Model model) {
 		model.addAttribute("restart", restart);
-		//↓これはうまく分岐できないときに使ってね
-		System.out.println("sendメソッド実行");
+//		System.out.println("sendメソッド実行");
 		return "team8/team8_start";
 	}
 }
