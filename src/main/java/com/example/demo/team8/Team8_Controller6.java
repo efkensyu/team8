@@ -3,6 +3,7 @@ package com.example.demo.team8;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +24,7 @@ public class Team8_Controller6 {
 	}
 	
 	@PostMapping(value = "/team8_3-4", params = "next")
-	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_4 empForm, BindingResult result) {
+	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_4 empForm, BindingResult result, Model model) {
 		
 		if (result.hasErrors()) {
 			return "team8/team8_question3-4";
@@ -31,10 +32,12 @@ public class Team8_Controller6 {
 		
 		if (empForm.getQuestion3_4().equals("S7")) {
 //			System.out.println(empForm.getQuestion3_4());
-			List<Team8_Snack> Data = service.findBySnackCd(empForm.getQuestion3_4());
+			List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_4());
+			model.addAttribute("data", data);
 			return "team8/team8_kekka";
 		} else if (empForm.getQuestion3_4().equals("S8")) {
-			List<Team8_Snack> Data = service.findBySnackCd(empForm.getQuestion3_4());
+			List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_4());
+			model.addAttribute("data", data);
 			return "team8/team8_kekka";
 		}
 		
