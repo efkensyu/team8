@@ -32,10 +32,12 @@ public class Team8_Controller5 {
 		
 		if (empForm.getQuestion3_2().equals("S3")) {
 //			System.out.println(empForm.getQuestion3_2());
-			List<Team8_Snack> Data = service.findBySnackCd(empForm.getQuestion3_2());
+			List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_2());
+			model.addAttribute("data", data);
 			return "team8/team8_kekka";
 		} else if (empForm.getQuestion3_2().equals("S4")) {
-			List<Team8_Snack> Data = service.findBySnackCd(empForm.getQuestion3_2());
+			List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_2());
+			model.addAttribute("data", data);
 			return "team8/team8_kekka";
 		}
 		
