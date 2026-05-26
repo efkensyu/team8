@@ -13,10 +13,15 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class Team8_Controller1 {
 	@GetMapping("/team8_start")
-	public String index() {
+	public String index() throws Throwable {
 //		System.out.println("getメソッド実行");
-		log.info("[スタート画面]getメソッドのinfoログ");
-		return "team8/team8_start";
+		try {
+			log.info("[スタート画面]getメソッドのinfoログ");
+			return "team8/team8_start";
+		} catch(Exception e) {
+			return "team8/team8_error";
+		}
+		
 	}
 	
 	@PostMapping(value = "/team8_start", params = "next")

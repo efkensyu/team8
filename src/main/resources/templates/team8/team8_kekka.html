@@ -10,6 +10,7 @@
 			<h2>診断結果</h2>
 			<p>あなたは・・・</p>
 			<p th:text="${data.snackNm}"></p>
+			<img th:src="@{${data.imagepath}}">
 			<p>がおすすめ！</p>
 			<br>
 			<input type="submit" name="restart" value="もう一度やる？" />
