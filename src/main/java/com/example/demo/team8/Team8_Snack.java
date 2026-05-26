@@ -20,4 +20,7 @@ public class Team8_Snack {
 	
 	@Column(name = "type_cd")
 	private String typeCd;
+	
+	@Column(name = "imagepath")
+	private String imagepath;
 }
