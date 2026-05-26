@@ -6,11 +6,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="post" th:action="@{/team8_2-1}" th:object="${empForm}">
+<form method="post" th:action="@{/team8_2-1}" th:object="${empForm2_1}">
 	
 	<div class="card">
 <!--	nameのところは質問画面によって変える-->
 	<h2>あなたはどっちですか？</h2>
+	<p class="mark">☆マークをタップしてください♪</p>
 	<p class="radio"><input type="radio" id="q1" th:field="*{question2_1}" value="answer1" />
 		<label for="q1" class="star">★</label>
 		トレンドに敏感ですか？</p>
