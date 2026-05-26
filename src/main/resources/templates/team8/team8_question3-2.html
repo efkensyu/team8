@@ -17,7 +17,7 @@
 			<p class="radio"><input type="radio" id="q2" th:field="*{question3_2}" value="S4" />
 				<label for="q2" class="star">★</label>
 			アウトドア派ですか？</p>
-			<th:block th:if="${#fields.hasErrors('question3_2')}" th:errors="*{question3_2}"></th:block>
+			<div class="error" th:if="${#fields.hasErrors('question3_2')}" th:errors="*{question3_2}"></div>
 			<br>
 			<div class="flexbox">
 			<input class="button" type="submit" name="back" value="戻る" />

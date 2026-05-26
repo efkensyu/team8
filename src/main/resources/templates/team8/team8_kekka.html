@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.ofg">
+	<link rel="stylesheet" type="text/css" th:href="@{team8/team8_kekka.css}">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
+	<div class="card">
+		
 	<form method="post" th:action="@{/team8_kekka}">
 		<th:block th:each="data : ${data}">
 			<h2>診断結果</h2>
-			<p>あなたは・・・</p>
-			<p class="kekka" th:text="${data.snackNm}"></p>
+			<p class="kekka">あなたは・・・</p>
+			<p class="snack" th:text="${data.snackNm}"></p>
+			 <div class="image_position">
 			<img class="image" th:src="@{${data.imagepath}}">
+			 </div>
 			<p class="kekka">がおすすめ！</p>
 			<br>
 			<div class="flexbox">
@@ -18,5 +23,7 @@
 			</div>
 		</th:block>
 	</form>
+	
+	</div>
 </body>
 </html>
