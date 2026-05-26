@@ -17,14 +17,27 @@ body{
 	background-image: url("new壁紙.png");
 	padding: 30px;
 	border-radius: 20px;
-	width: 700px;
+	width: 800px;
+	margin-top: 50px;
+}
+
+/*お菓子の名前*/
+p.snack{
+	padding: 10px;
+	color: #DDFFFF;
+	font-weight: bold;
+	font-size: 80px;
+	display: flex;
+	justify-content: center;
+	text-shadow: 2px 2px 0px #000066,-2px -2px 0px #000066,
+				 -2px 2px 0px #000066,2px -2px 0px #000066,
+				 2px 0px 0px #000066, -2px 0px 0px #000066,
+				 0px 2px 0px #000066, 0px -2px 0px #000066;
+				 margin: 0;
 }
 
 
-
-
-
-/*質問の色など*/
+/*あなたは…がおすすめ！*/
 p.kekka{color: rgb(128, 64, 0);
 	text-align: center;
 	font-size: 30px;
@@ -43,6 +56,18 @@ h2{color: #FF69A3;
 		display: flex;
 		justify-content: center;
 		gap: 25px;	
+	}
+	
+	
+	img.image{
+		width: 500px;
+		height: auto;
+		
+	}
+	
+	.image_position{
+		display: flex;
+		justify-content: center;
 	}
 	
 	input.button{
@@ -78,6 +103,13 @@ h2{color: #FF69A3;
 	    transform: scale(1.1)
 	            }
 						
-
+/*Validationの色*/						
+.error{
+		color: red;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 10px;
+		font-size: 30px;
+				}
 
 

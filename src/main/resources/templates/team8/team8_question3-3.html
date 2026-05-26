@@ -18,7 +18,7 @@
 	<p class="radio"><input type="radio" id="q2" th:field="*{question3_3}" value="S6" />
 		<label for="q2" class="star">★</label>
 		効率を重視しますか？</p>
-	<th:block th:if="${#fields.hasErrors('question3_3')}" th:errors="*{question3_3}"></th:block>
+	<div class="error" th:if="${#fields.hasErrors('question3_3')}" th:errors="*{question3_3}"></div>
 	<br>
 	<div class="flexbox">
 	<input class="button" type="submit" name="back" value="戻る" />
