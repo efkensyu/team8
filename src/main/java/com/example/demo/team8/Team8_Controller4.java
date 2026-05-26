@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RequiredArgsConstructor
 @Controller
 public class Team8_Controller4 {
@@ -20,6 +22,7 @@ public class Team8_Controller4 {
 	@GetMapping("/team8_3-1")
 	public String index(@ModelAttribute("empForm") Team8_EmpForm3_1 empForm) {
 //		System.out.println("indexメソッド実行");
+		log.info("[質問画面3-1]getメソッドのinfoログ");
 		return "team8/team8_question3-1";
 	}
 	
@@ -27,6 +30,7 @@ public class Team8_Controller4 {
 	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_1 empForm, BindingResult result, Model model) {
 		
 		if (result.hasErrors()) {
+			log.info("[質問画面3-1]postメソッドのinfoログ");
 			return "team8/team8_question3-1";
 		}
 		
@@ -34,11 +38,13 @@ public class Team8_Controller4 {
 //			System.out.println(empForm.getQuestion3_1());
 			List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_1());
 			model.addAttribute("data", data);
+			log.info("[質問画面3-1]postメソッドのinfoログ");
 			return "team8/team8_kekka";
 		} else if (empForm.getQuestion3_1().equals("S2")) {
 //			System.out.println(empForm.getQuestion3_1());
 			List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_1());
 			model.addAttribute("data", data);
+			log.info("[質問画面3-1]postメソッドのinfoログ");
 			return "team8/team8_kekka";
 		}
 		
@@ -49,6 +55,7 @@ public class Team8_Controller4 {
 	@PostMapping(value = "/team8_3-1", params = "back")
 	public String send3(@ModelAttribute("empForm") Team8_EmpForm empForm) {
 //		System.out.println("send3実行");
+		log.info("[質問画面3-1]postメソッドのinfoログ");
 		return "redirect:/team8_2-1";
 	}
 }
