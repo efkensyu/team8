@@ -14,10 +14,10 @@ body{
 	  
 /*カード風*/
 .card{
-	background: #FFF0F5;
+	background-image: url("new壁紙.png");
 	padding: 30px;
 	border-radius: 20px;
-	width: 500px;
+	width: 700px;
 }
 
 /*ラジオボタンを星に*/
