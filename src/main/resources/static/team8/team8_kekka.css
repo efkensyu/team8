@@ -10,8 +10,8 @@ body{
 	  display: flex;
 	  justify-content: center;
 	  align-items: center; 
-	}
-	
+}
+	  
 /*カード風*/
 .card{
 	background-image: url("new壁紙.png");
@@ -20,23 +20,18 @@ body{
 	width: 700px;
 }
 
-/*ラジオボタンを星に*/
-.radio input[type="radio"]:checked + .star {
-  color: gold;
-}
 
-.radio input[type="radio"] {
-  display: none;
-}
+
+
 
 /*質問の色など*/
-p.radio{color: rgb(128, 64, 0);
+p.kekka{color: rgb(128, 64, 0);
 	text-align: center;
 	font-size: 30px;
 	font-weight: 600px;
 	}
 
-/*あなたはどっちですか？*/
+/*診断結果*/
 h2{color: #FF69A3;
       text-align: center;
 	  font-size: 45px;
@@ -60,10 +55,21 @@ h2{color: #FF69A3;
 		     max-width: 240px;
 		      padding: 8px 15px;
 		     color: rgb(128, 64, 0);
-		  background: #FFFF99;
+		     background: #FFFF99;
 		     font-weight: 600px;
 		     border-radius: 30px;
 		     box-shadow: 0px 5px 5px rgb(255, 255, 0);
+
+	}
+	
+	
+	
+	
+	
+	.flexbox{
+		display: flex;
+		justify-content: center;
+		
 	}
 			
 	
