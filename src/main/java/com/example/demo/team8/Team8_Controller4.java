@@ -32,7 +32,7 @@ public class Team8_Controller4 {
 	}
 	
 	@PostMapping(value = "/team8_3-1", params = "next")
-	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_1 empForm, BindingResult result, Model model) {
+	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_1 empForm, BindingResult result, Team8_EmpFormName empFormN, Model model) {
 		try {
 			if (result.hasErrors()) {
 				log.info("[質問画面3-1]postメソッドのinfoログ");
@@ -43,12 +43,14 @@ public class Team8_Controller4 {
 //				System.out.println(empForm.getQuestion3_1());
 				List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_1());
 				model.addAttribute("data", data);
+				model.addAttribute("empFormN", empFormN);
 				log.info("[質問画面3-1]postメソッドのinfoログ");
 				return "team8/team8_kekka";
 			} else if (empForm.getQuestion3_1().equals("S2")) {
 //				System.out.println(empForm.getQuestion3_1());
 				List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_1());
 				model.addAttribute("data", data);
+				model.addAttribute("empFormN", empFormN);
 				log.info("[質問画面3-1]postメソッドのinfoログ");
 				return "team8/team8_kekka";
 			}

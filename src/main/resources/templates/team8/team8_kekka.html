@@ -8,10 +8,10 @@
 <body>
 	<div class="card">
 		
-	<form method="post" th:action="@{/team8_kekka}">
+	<form method="post" th:action="@{/team8_kekka}" th:object="${empFormN}">
 		<th:block th:each="data : ${data}">
 			<h2>診断結果</h2>
-			<p class="kekka">あなたは・・・</p>
+			<p class="kekka" th:text="*{name} + は・・・"></p>
 			<p class="snack" th:text="${data.snackNm}"></p>
 			 <div class="image_position">
 			<img class="image" th:src="@{${data.imagepath}}">
