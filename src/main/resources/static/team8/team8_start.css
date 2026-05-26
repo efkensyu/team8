@@ -42,3 +42,21 @@ input.start:hover{
     border-bottom: solid 2px #663300;
     transform: scale(1.1)
             }
+			
+			
+/*Validationの色*/						
+.error{
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 30px;
+			}
+			
+input.name{
+	width: 80px;
+}
+
+.namebox{
+	text-align: center;
+}

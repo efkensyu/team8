@@ -30,6 +30,14 @@ body{
   display: none;
 }
 
+/*☆マークタップして*/
+p.mark{
+	color:#FF3300;
+	font-size: 20px; 
+	font-weight: 40px;
+	text-align: center;
+}
+
 /*質問の色など*/
 p.radio{color: rgb(128, 64, 0);
 	text-align: center;
@@ -55,7 +63,7 @@ h2{color: #FF69A3;
 	input.button{
 
 		  position: relative;
-		     display: block;
+		   display: block;
 		  font-size: 20px;
 		     justify-content: space-around;
 		     align-items: center;
