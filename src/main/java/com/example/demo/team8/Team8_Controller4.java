@@ -21,41 +21,54 @@ public class Team8_Controller4 {
 	
 	@GetMapping("/team8_3-1")
 	public String index(@ModelAttribute("empForm") Team8_EmpForm3_1 empForm) {
-//		System.out.println("indexメソッド実行");
-		log.info("[質問画面3-1]getメソッドのinfoログ");
-		return "team8/team8_question3-1";
+		try {
+//			System.out.println("indexメソッド実行");
+			log.info("[質問画面3-1]getメソッドのinfoログ");
+			return "team8/team8_question3-1";
+		} catch(Exception e) {
+			log.error("エラー発生");
+			return "team8/team8_error";
+		}
 	}
 	
 	@PostMapping(value = "/team8_3-1", params = "next")
 	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_1 empForm, BindingResult result, Model model) {
-		
-		if (result.hasErrors()) {
-			log.info("[質問画面3-1]postメソッドのinfoログ");
-			return "team8/team8_question3-1";
+		try {
+			if (result.hasErrors()) {
+				log.info("[質問画面3-1]postメソッドのinfoログ");
+				return "team8/team8_question3-1";
+			}
+			
+			if (empForm.getQuestion3_1().equals("S1")) {
+//				System.out.println(empForm.getQuestion3_1());
+				List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_1());
+				model.addAttribute("data", data);
+				log.info("[質問画面3-1]postメソッドのinfoログ");
+				return "team8/team8_kekka";
+			} else if (empForm.getQuestion3_1().equals("S2")) {
+//				System.out.println(empForm.getQuestion3_1());
+				List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_1());
+				model.addAttribute("data", data);
+				log.info("[質問画面3-1]postメソッドのinfoログ");
+				return "team8/team8_kekka";
+			}
+		} catch(Exception e) {
+			log.error("エラー発生");
+			return "team8/team8_error";
 		}
-		
-		if (empForm.getQuestion3_1().equals("S1")) {
-//			System.out.println(empForm.getQuestion3_1());
-			List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_1());
-			model.addAttribute("data", data);
-			log.info("[質問画面3-1]postメソッドのinfoログ");
-			return "team8/team8_kekka";
-		} else if (empForm.getQuestion3_1().equals("S2")) {
-//			System.out.println(empForm.getQuestion3_1());
-			List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_1());
-			model.addAttribute("data", data);
-			log.info("[質問画面3-1]postメソッドのinfoログ");
-			return "team8/team8_kekka";
-		}
-		
-		return "team8/team8_question3-3";
+		return null;
 	}
 	
 	
 	@PostMapping(value = "/team8_3-1", params = "back")
 	public String send3(@ModelAttribute("empForm") Team8_EmpForm empForm) {
-//		System.out.println("send3実行");
-		log.info("[質問画面3-1]postメソッドのinfoログ");
-		return "redirect:/team8_2-1";
+		try {
+//			System.out.println("send3実行");
+			log.info("[質問画面3-1]postメソッドのinfoログ");
+			return "redirect:/team8_2-1";
+		} catch(Exception e) {
+			log.error("エラー発生");
+			return "team8/team8_error";
+		}
 	}
 }

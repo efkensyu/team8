@@ -23,8 +23,6 @@ public class Team8_Controller3 {
 			return "team8/team8_error";
 		}
 	}
-		
-
 	
 	@PostMapping(value = "/team8_2-2", params = "next")
 	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm2_2 empForm, BindingResult result) {
