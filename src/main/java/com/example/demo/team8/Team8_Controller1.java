@@ -98,7 +98,7 @@ public class Team8_Controller1 {
 		try {
 //			System.out.println("send3メソッド実行");
 			log.info("[質問画面1]postメソッドのinfoログ");
-			return "redirect:/team8_starwt";
+			return "redirect:/team8_start";
 
 		} catch(Exception e) {
 			log.error("エラー発生");
