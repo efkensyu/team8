@@ -7,6 +7,9 @@
 </head>
 <body>
 	<form method="post" th:action="@{/team8_3-1}" th:object="${empForm}">
+		
+		<div class="card">
+			
 		<h2>あなたはどっちですか？</h2>
 			<p class="radio"><input type="radio" id="q1" th:field="*{question3_1}" value="S1" />
 				<label for="q1" class="star">★</label>
@@ -19,6 +22,8 @@
 			<div class="flexbox">
 			<input class="button" type="submit" name="back" value="戻る" />
 			<input class="button" type="submit" name="next" value="次へ" />
+			</div>
+			
 			</div>
 	</form>
 </body>

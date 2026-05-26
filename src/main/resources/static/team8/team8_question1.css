@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
-/*body{font-family: "Hannari";}*/
+body{font-family: "Hannari";}
 
 body{background-color: beige;}
 
-body{background-image: url("new壁紙.png")}
+body{background-image: url("壁紙.png")}
 
 body{
 	  display: flex;
-	  justify-content: center; /* 横中央 */
+	  justify-content: center;
 	  align-items: center; 
 }
 

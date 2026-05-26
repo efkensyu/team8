@@ -4,15 +4,22 @@
 
 body{background-color: beige;}
 
-body{background-image: url("new壁紙.png")}
+body{background-image: url("壁紙.png")}
 
+
+body{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center; 
+	}
+	
 /*カード風*/
-/*.card{*/
-/*	background: #FFF0F5;*/
-/*	padding: 30px;*/
-/*	border-radius: 20px;*/
-/*	width: 500px;*/
-/*}*/
+.card{
+	background: #FFF0F5;
+	padding: 30px;
+	border-radius: 20px;
+	width: 500px;
+}
 
 /*ラジオボタンを星に*/
 .radio input[type="radio"]:checked + .star {
