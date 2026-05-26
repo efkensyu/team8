@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
@@ -199,8 +198,14 @@ public class Team8_Log {
 	
 	
 //	エラー処理-------------------------------------------------------
-	@AfterThrowing("execution(* com.example.demo.team8.*.*(..))")
-	public void afterThrowing1(JoinPoint jp) {
-		log.error("エラー発生。[引数] = {}", Arrays.toString(jp.getArgs()));
-	}
+//	@Around("execution(* com.example.demo.team8.Team8_Controller1.send1(Team8_EmpForm))")
+//	public Object aroundLog(ProceedingJoinPoint jp) throws Throwable {
+//		try {
+//			Object result = jp.proceed();
+//			log.info("aroundLogメソッド開始：" + jp.getSignature());
+//			return result;
+//		} catch (Exception e){
+//			return "team8/team8_error";
+//		}
+//	}
 }

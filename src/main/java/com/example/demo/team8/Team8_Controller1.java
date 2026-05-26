@@ -13,28 +13,31 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class Team8_Controller1 {
 	@GetMapping("/team8_start")
-	public String index() throws Throwable {
+	public String index(@ModelAttribute("empForm") Team8_EmpForm empForm) {
 //		System.out.println("getメソッド実行");
-		try {
 			log.info("[スタート画面]getメソッドのinfoログ");
 			return "team8/team8_start";
-		} catch(Exception e) {
-			return "team8/team8_error";
-		}
-		
 	}
 	
 	@PostMapping(value = "/team8_start", params = "next")
 	public String send1(@ModelAttribute("empForm") Team8_EmpForm empForm) {
 //		System.out.println("send1メソッド実行");
-//		model.addAttribute("empForm", new Team8_EmpForm1());
+//		System.out.println(empForm.getName() + "a");
+		//名前未入力の場合の処理
+//		if (empForm.getName().isBlank()) {
+//			log.error("[エラー出力]名前未入力");
+//			throw new Exception();
+//		} else {
+//			log.info("[スタート画面]postメソッドのinfoログ");
+//			return "redirect:/team8_1";
+//		}
 		log.info("[スタート画面]postメソッドのinfoログ");
-		return "redirect:/team8_1";
+		return "team8/team8_1";
 	}
 	
 	//質問画面１
 	@GetMapping("/team8_1")
-	public String index1(@ModelAttribute("empForm") Team8_EmpForm empForm) {
+	public String index1(@ModelAttribute("empForm") Team8_EmpForm empForm, BindingResult result) {
 		log.info("[質問画面1]getメソッドのinfoログ");
 		return "team8/team8_question1";
 	}
