@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.ofg">
+	<link rel="stylesheet" type="text/css" th:href="@{team8/team8_question3-4.css}">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -7,14 +8,18 @@
 <body>
 	<form method="post" th:action="@{/team8_3-4}" th:object="${empForm}">
 		<h2>あなたはどっちですか？</h2>
-		<p><input type="radio" th:field="*{question3_4}" value="S7" />
+		<p class="radio"><input type="radio" id="q1" th:field="*{question3_4}" value="S7" />
+			<label for="q1" class="star">★</label>
 			こだわりを持っていて、一人でいることが好きですか？</p>
-		<p><input type="radio" th:field="*{question3_4}" value="S8" />
+		<p class="radio"><input type="radio" id="q2" th:field="*{question3_4}" value="S8" />
+			<label for="q2" class="star">★</label>
 			みんなでワイワイ楽しむことが好きですか？</p>
 		<th:block th:if="${#fields.hasErrors('question3_4')}" th:errors="*{question3_4}"></th:block>
 		<br>
-		<input type="submit" name="back" value="戻る" />
-		<input type="submit" name="next" value="次へ" />
+		<div class="flexbox">
+		<input class="button" type="submit" name="back" value="戻る" />
+		<input class="button" type="submit" name="next" value="次へ" />
+		</div>
 	</form>
 </body>
 </html>

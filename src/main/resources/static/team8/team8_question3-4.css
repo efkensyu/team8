@@ -6,19 +6,13 @@ body{background-color: beige;}
 
 body{background-image: url("new壁紙.png")}
 
-body{
-	  display: flex;
-	  justify-content: center; /* 横中央 */
-	  align-items: center; 
-}
-
 /*カード風*/
-.card{
-	background: #FFF0F5;
-	padding: 30px;
-	border-radius: 20px;
-	width: 500px;
-}
+/*.card{*/
+/*	background: #FFF0F5;*/
+/*	padding: 30px;*/
+/*	border-radius: 20px;*/
+/*	width: 500px;*/
+/*}*/
 
 /*ラジオボタンを星に*/
 .radio input[type="radio"]:checked + .star {
@@ -47,8 +41,7 @@ h2{color: #FF69A3;
 	.flexbox{
 		display: flex;
 		justify-content: center;
-		gap: 25px;
-		
+		gap: 25px;	
 	}
 	
 	input.button{

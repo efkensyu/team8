@@ -9,14 +9,18 @@
 	<form method="post" th:action="@{/team8_3-3}" th:object="${empForm}">
 <!--	nameのところは質問画面によって変える-->
 	<h2>あなたはどっちですか？</h2>
-	<p><input type="radio" th:field="*{question3_3}" value="S5" />
+	<p class="radio"><input type="radio" id="q1" th:field="*{question3_3}" value="S5" />
+		<label for="q1" class="star">★</label>
 		感情を重視しますか？</p>
-	<p><input type="radio" th:field="*{question3_3}" value="S6" />
+	<p class="radio"><input type="radio" id="q2" th:field="*{question3_3}" value="S6" />
+		<label for="q2" class="star">★</label>
 		効率を重視しますか？</p>
 	<th:block th:if="${#fields.hasErrors('question3_3')}" th:errors="*{question3_3}"></th:block>
 	<br>
-	<input type="submit" name="back" value="戻る" />
-	<input type="submit" name="next" value="次へ" />
+	<div class="flexbox">
+	<input class="button" type="submit" name="back" value="戻る" />
+	<input class="button" type="submit" name="next" value="次へ" />
+	</div>
 </form>
 </body>
 </html>
