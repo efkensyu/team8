@@ -19,7 +19,7 @@ public class Team8_Controller1 {
 	}
 	
 	@GetMapping("/team8_start")
-	public String index(@ModelAttribute("empForm") Team8_EmpForm empForm) {
+	public String index(@ModelAttribute("empFormN") Team8_EmpFormName empFormN) {
 //		System.out.println("getメソッド実行");
 		
 		try {
@@ -34,12 +34,16 @@ public class Team8_Controller1 {
 	}
 	
 	@PostMapping(value = "/team8_start", params = "next")
-	public String send1(@ModelAttribute("empForm") Team8_EmpForm empForm) {
+	public String send1(@ModelAttribute("empFormN") @Validated Team8_EmpFormName empFormN, BindingResult result) {
 //		System.out.println("send1メソッド実行");
 		
 		try {
+			if(result.hasErrors()) {
+				log.info("[スタート画面1]postメソッドのinfoログ");
+				return "team8/team8_start";
+			}
 			log.info("[スタート画面]postメソッドのinfoログ");
-			return "team8/team8_question1";
+			return "redirect:/team8_1";
 		} catch(Exception e) {
 			log.error("エラー発生");
 			return "team8/team8_error";
@@ -48,7 +52,7 @@ public class Team8_Controller1 {
 	
 	//質問画面１
 	@GetMapping("/team8_1")
-	public String index1(@ModelAttribute("empForm") Team8_EmpForm empForm, BindingResult result) {
+	public String index1(@ModelAttribute("empForm") Team8_EmpForm empForm) {
 		
 		try {
 			log.info("[質問画面1]getメソッドのinfoログ");
@@ -94,7 +98,7 @@ public class Team8_Controller1 {
 		try {
 //			System.out.println("send3メソッド実行");
 			log.info("[質問画面1]postメソッドのinfoログ");
-			return "team8/team8_start";
+			return "redirect:/team8_starwt";
 
 		} catch(Exception e) {
 			log.error("エラー発生");

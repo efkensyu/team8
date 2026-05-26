@@ -8,7 +8,4 @@ import lombok.Data;
 public class Team8_EmpForm {
 	@NotNull(message = "どちらかを選んでください！")
 	private String question1;
-	
-	//@NotBlank
-	private String name;
 }
