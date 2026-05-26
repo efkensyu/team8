@@ -54,9 +54,14 @@ input.start:hover{
 			}
 			
 input.name{
-	width: 80px;
+	width: 140px;
+	height: 40px;
+	font-size: 30px;
 }
 
 .namebox{
 	text-align: center;
 }
+
+
+
