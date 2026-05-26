@@ -6,16 +6,26 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import lombok.extern.slf4j.Slf4j;
 
+@SessionAttributes({"empFormN", "empForm"})
 @Slf4j
 @Controller
 public class Team8_Controller1 {
-	
 	//意図的にエラーを起こすメソッド
 	public void causeError() throws RuntimeException {
 		throw new RuntimeException();
+	}
+	
+	@ModelAttribute("empFormN")
+	public Team8_EmpFormName setUpEmpFormN() {
+		return new Team8_EmpFormName();
+	}
+	@ModelAttribute("empForm")
+	public Team8_EmpForm setUpEmpForm() {
+		return new Team8_EmpForm();
 	}
 	
 	@GetMapping("/team8_start")
@@ -28,7 +38,7 @@ public class Team8_Controller1 {
 			log.info("[スタート画面]getメソッドのinfoログ");
 			return "team8/team8_start";
 		} catch(Exception e) {
-			log.error("エラー発生");
+			log.error("エラー発生", e);
 			return "team8/team8_error";
 		}
 	}
@@ -45,20 +55,20 @@ public class Team8_Controller1 {
 			log.info("[スタート画面]postメソッドのinfoログ");
 			return "redirect:/team8_1";
 		} catch(Exception e) {
-			log.error("エラー発生");
+			log.error("エラー発生", e);
 			return "team8/team8_error";
 		}
 	}
 	
 	//質問画面１
 	@GetMapping("/team8_1")
-	public String index1(@ModelAttribute("empForm") Team8_EmpForm empForm) {
+	public String index1(@ModelAttribute("empForm") Team8_EmpForm empForm, Team8_EmpFormName empFormN) {
 		
 		try {
 			log.info("[質問画面1]getメソッドのinfoログ");
 			return "team8/team8_question1";
 		} catch(Exception e) {
-			log.error("エラー発生");
+			log.error("エラー発生", e);
 			return "team8/team8_error";
 		}
 	}
@@ -87,7 +97,7 @@ public class Team8_Controller1 {
 				return "redirect:/team8_2-2";
 			}
 		} catch(Exception e) {
-			log.error("エラー発生");
+			log.error("エラー発生", e);
 			}
 			return "team8/team8_error";
 		}
@@ -101,7 +111,7 @@ public class Team8_Controller1 {
 			return "redirect:/team8_start";
 
 		} catch(Exception e) {
-			log.error("エラー発生");
+			log.error("エラー発生", e);
 			}
 			return "team8/team8_error";
 		}
