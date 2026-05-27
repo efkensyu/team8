@@ -1,6 +1,7 @@
 package com.example.demo.team8;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class Team8_Controller5 {
 	private final Team8_Service service;
+	private final Team8_RankingRepository rankingRepository;
 	
 	@GetMapping("/team8_3-2")
 	public String index(@ModelAttribute("empForm3_2") Team8_EmpForm3_2 empForm) {
@@ -34,7 +36,8 @@ public class Team8_Controller5 {
 	}
 	
 	@PostMapping(value = "/team8_3-2", params = "next")
-	public String send1(@ModelAttribute("empForm3_2") @Validated Team8_EmpForm3_2 empForm, BindingResult result, Model model) {
+	public String send1(@ModelAttribute("empForm3_2") @Validated Team8_EmpForm3_2 empForm, BindingResult result,
+			@ModelAttribute("empFormN") Team8_EmpFormName empFormN, Model model) {
 		try {
 			if (result.hasErrors()) {
 				log.info("[質問画面3-2]postメソッドのinfoログ");
@@ -45,11 +48,35 @@ public class Team8_Controller5 {
 //				System.out.println(empForm.getQuestion3_2());
 				List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_2());
 				model.addAttribute("data", data);
+				
+				//ランキング
+				Team8_Ranking ranking = new Team8_Ranking();
+				ranking.setResultCd(UUID.randomUUID().toString());
+				ranking.setUserNm(empFormN.getName());
+				ranking.setSnackCd(empForm.getQuestion3_2());
+				rankingRepository.save(ranking);
+				
+				List<Object[]> ranking1 = rankingRepository.getRanking();
+				model.addAttribute("ranking", ranking1);
+				System.out.println(ranking);
+				
 				log.info("[質問画面3-2]postメソッドのinfoログ");
 				return "team8/team8_kekka";
 			} else if (empForm.getQuestion3_2().equals("S4")) {
 				List<Team8_Snack> data = service.findBySnackCd(empForm.getQuestion3_2());
 				model.addAttribute("data", data);
+				
+				//ランキング
+				Team8_Ranking ranking = new Team8_Ranking();
+				ranking.setResultCd(UUID.randomUUID().toString());
+				ranking.setUserNm(empFormN.getName());
+				ranking.setSnackCd(empForm.getQuestion3_2());
+				rankingRepository.save(ranking);
+				
+				List<Object[]> ranking1 = rankingRepository.getRanking();
+				model.addAttribute("ranking", ranking1);
+				System.out.println(ranking);
+				
 				log.info("[質問画面3-2]postメソッドのinfoログ");
 				return "team8/team8_kekka";
 			}

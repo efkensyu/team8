@@ -18,6 +18,15 @@
 			 </div>
 			<p class="kekka">がおすすめ！</p>
 			<br>
+			
+			<p th:text="みんなの診断結果"></p>
+			<table th:each="rank,i : ${ranking}">
+				<tr>
+					<td th:text="${i.count} + 位">aaaa</td>
+					<td th:text="${rank[0]}"></td>
+				</tr>				
+			</table>
+
 			<div class="flexbox">
 			<input class="button" type="submit" name="restart" value="もう一度やる？" />
 			</div>
