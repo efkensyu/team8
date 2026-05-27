@@ -9,10 +9,12 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+@SessionAttributes({"empFormN", "empForm"})
 @Slf4j
 @RequiredArgsConstructor
 @Controller
@@ -20,7 +22,7 @@ public class Team8_Controller2 {
 	private final Team8_Service service;
 	
 	@GetMapping("/team8_3-3")
-	public String index(@ModelAttribute("empForm") Team8_EmpForm3_3 empForm) {
+	public String index(@ModelAttribute("empForm3_3") Team8_EmpForm3_3 empForm) {
 		
 		try {
 //			System.out.println("getメソッド実行");
@@ -35,7 +37,7 @@ public class Team8_Controller2 {
 	
 	
 	@PostMapping(value = "/team8_3-3", params = "next")
-	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm3_3 empForm, BindingResult result, Model model) {
+	public String send1(@ModelAttribute("empForm3_3") @Validated Team8_EmpForm3_3 empForm, BindingResult result, Model model) {
 		
 		try {
 //			System.out.println("send1メソッド実行");

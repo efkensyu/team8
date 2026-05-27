@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class Team8_Controller7 {
 	@GetMapping("/team8_2-1")
-	public String index(@ModelAttribute("empForm") Team8_EmpForm2_1 empForm) {
+	public String index(@ModelAttribute("empForm2_1") Team8_EmpForm2_1 empForm) {
 		try {
 //			System.out.println("indexメソッド実行");
 			log.info("[質問画面2-1]getメソッドのinfoログ");
@@ -26,7 +26,7 @@ public class Team8_Controller7 {
 	}
 	
 	@PostMapping(value = "/team8_2-1", params = "next")
-	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm2_1 empForm, BindingResult result, Model model) {
+	public String send1(@ModelAttribute("empForm2_1") @Validated Team8_EmpForm2_1 empForm, BindingResult result, Model model) {
 		try {
 			if (result.hasErrors()) {
 				log.info("[質問画面2-1]postメソッドのinfoログ");

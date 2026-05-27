@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import lombok.extern.slf4j.Slf4j;
 
+
 @Slf4j
 @Controller
 public class Team8_Controller3 {
 	@GetMapping("/team8_2-2")
-	public String index(@ModelAttribute("empForm") Team8_EmpForm2_2 empForm) {
+	public String index(@ModelAttribute("empForm2_2") Team8_EmpForm2_2 empForm) {
 		try {
 //			System.out.println("indexメソッド実行");
 			log.info("[質問画面2-2]getメソッドのinfoログ");
@@ -25,7 +26,7 @@ public class Team8_Controller3 {
 	}
 	
 	@PostMapping(value = "/team8_2-2", params = "next")
-	public String send1(@ModelAttribute("empForm") @Validated Team8_EmpForm2_2 empForm, BindingResult result) {
+	public String send1(@ModelAttribute("empForm2_2") @Validated Team8_EmpForm2_2 empForm, BindingResult result) {
 		try {
 //			System.out.println(result.hasErrors());
 			if (result.hasErrors()) {
@@ -51,7 +52,7 @@ public class Team8_Controller3 {
 	}
 	
 	@PostMapping(value = "/team8_2-2", params = "back")
-	public String send2(@ModelAttribute("empForm") Team8_EmpForm empForm) {
+	public String send2(@ModelAttribute("empForm2_2") Team8_EmpForm empForm) {
 		try {
 //			System.out.println("send3実行");
 			log.info("[質問画面2-2]postメソッドのinfoログ");

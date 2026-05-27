@@ -22,7 +22,7 @@ public class Team8_Controller4 {
 	private final Team8_Service service;
 	
 	@GetMapping("/team8_3-1")
-	public String index(@ModelAttribute("empForm3-1") Team8_EmpForm3_1 empForm) {
+	public String index(@ModelAttribute("empForm3_1") Team8_EmpForm3_1 empForm) {
 		try {
 //			System.out.println("indexメソッド実行");
 			log.info("[質問画面3-1]getメソッドのinfoログ");
@@ -34,7 +34,7 @@ public class Team8_Controller4 {
 	}
 	
 	@PostMapping(value = "/team8_3-1", params = "next")
-	public String send1(@ModelAttribute("empForm3-1") @Validated Team8_EmpForm3_1 empForm, BindingResult result,
+	public String send1(@ModelAttribute("empForm3_1") @Validated Team8_EmpForm3_1 empForm, BindingResult result,
 			@ModelAttribute("empFormN") Team8_EmpFormName empFormN, Model model) {
 		try {
 			if (result.hasErrors()) {
@@ -64,7 +64,7 @@ public class Team8_Controller4 {
 	
 	
 	@PostMapping(value = "/team8_3-1", params = "back")
-	public String send3(@ModelAttribute("empForm3-1") Team8_EmpForm3_1 empForm) {
+	public String send3(@ModelAttribute("empForm3_1") Team8_EmpForm3_1 empForm) {
 		try {
 //			System.out.println("send3実行");
 			log.info("[質問画面3-1]postメソッドのinfoログ");
