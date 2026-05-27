@@ -12,6 +12,44 @@ body{
 	  align-items: center; 
 }
 	  
+p.ranking{
+	color: #FF69A3;
+	text-align: center;
+		font-size: 34px;
+		font-weight: 700px;
+		text-shadow: 3px 1px 1px  #222222;
+}
+
+td.rank1{
+	text-align: left;
+	color: #663300;
+	font-weight: bold;
+}
+
+td.rank2{
+	text-align: center;
+	padding: 10px;
+		color: #DDFFFF;
+		font-weight: bold;
+		font-size: 30px;
+		display: flex;
+		justify-content: center;
+		text-shadow: 1px 1px 0px #000066,-1px -1px 0px #000066,
+					 -1px 1px 0px #000066,1px -1px 0px #000066,
+					 1px 0px 0px #000066, -1px 0px 0px #000066,
+					 0px 1px 0px #000066, 0px -1px 0px #000066;
+					 margin: 0; 
+}
+
+
+table.table{
+/*	display: flex;*/
+/*	justify-content: center;*/
+/*	align-items: center;*/
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
 /*カード風*/
 .card{
 	background-image: url("new壁紙.png");
