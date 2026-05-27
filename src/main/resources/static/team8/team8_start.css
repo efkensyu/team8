@@ -63,5 +63,11 @@ input.name{
 	text-align: center;
 }
 
-
+p.name{
+	text-align: center;
+	font-size: 23px;
+	color: #FF3300;
+	font-weight: bold;
+	
+}
 

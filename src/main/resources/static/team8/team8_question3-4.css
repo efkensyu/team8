@@ -34,8 +34,8 @@ body{
 p.mark{
 	color:#FF3300;
 	font-size: 20px; 
-	font-weight: 40px;
 	text-align: center;
+	font-weight: bold;
 }
 
 /*質問の色など*/
