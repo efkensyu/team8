@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 public class Team8_EmpFormName {
-	@NotBlank(message = "名前を入力してください！")
+	@NotBlank(message = "入力されていません！")
 	@Size(min = 1, max = 10, message = "1文字以上10文字以下でおねがいします！")
 	private String name;
 }
