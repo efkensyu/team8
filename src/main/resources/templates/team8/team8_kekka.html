@@ -20,14 +20,15 @@
 			<br>
 			
 			<p class="ranking"  th:text="みんなの診断結果"></p>
-<!--			<div class="table">-->
-			<table class="table" th:each="rank,i : ${ranking}">
-				<tr>
+
+<!--			<table th:each="rank,i : ${ranking}">-->
+			<table class="table">
+				<tr th:each="rank,i : ${ranking}">
 					<td class="rank1" th:text="${i.count} + 位">aaaa</td>
 					<td class="rank2" th:text="${rank[0]}"></td>
 				</tr>				
 			</table>
-<!--			</div>-->
+
 
 			<br>
 			<br>

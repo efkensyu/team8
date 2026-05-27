@@ -24,16 +24,15 @@ td.rank1{
 	text-align: left;
 	color: #663300;
 	font-weight: bold;
+	width: 80px;
 }
 
 td.rank2{
-	text-align: center;
+	text-align: left;
 	padding: 10px;
 		color: #DDFFFF;
 		font-weight: bold;
 		font-size: 30px;
-		display: flex;
-		justify-content: center;
 		text-shadow: 1px 1px 0px #000066,-1px -1px 0px #000066,
 					 -1px 1px 0px #000066,1px -1px 0px #000066,
 					 1px 0px 0px #000066, -1px 0px 0px #000066,
