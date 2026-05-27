@@ -91,7 +91,7 @@ public class Team8_Controller6 {
 	@PostMapping(value = "/team8_3-4", params = "back")
 	public String send2() {
 		try {
-//			System.out.println("send2実行");
+//			//System.out.println("send2実行");
 			log.info("[質問画面3-4]postメソッドのinfoログ");
 			return "redirect:/team8_2-2";
 		} catch(Exception e) {
