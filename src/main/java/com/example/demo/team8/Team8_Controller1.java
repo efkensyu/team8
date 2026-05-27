@@ -79,7 +79,7 @@ public class Team8_Controller1 {
 //		System.out.println(empForm.getQuestion1());
 		
 		try {
-			
+			//意図的にエラーを起こす
 			//causeError();
 			
 			if(result.hasErrors()) {
