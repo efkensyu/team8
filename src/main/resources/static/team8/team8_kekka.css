@@ -4,6 +4,11 @@
 
 body{background-color: beige;}
 
+body{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-weight: bold;
+}
+
 body{background-image: url("壁紙.png")}
 
 body{
@@ -17,7 +22,7 @@ p.ranking{
 	text-align: center;
 		font-size: 34px;
 		font-weight: 700px;
-		text-shadow: 3px 1px 1px  #222222;
+		text-shadow: 3px 1px 1px  rgb(192, 192, 192);
 }
 
 td.rank1{
@@ -25,18 +30,19 @@ td.rank1{
 	color: #663300;
 	font-weight: bold;
 	width: 80px;
+	font-size: 20px;
 }
 
 td.rank2{
 	text-align: left;
 	padding: 10px;
-		color: #DDFFFF;
+		color: rgb(255, 255, 255);
 		font-weight: bold;
 		font-size: 30px;
-		text-shadow: 1px 1px 0px #000066,-1px -1px 0px #000066,
-					 -1px 1px 0px #000066,1px -1px 0px #000066,
-					 1px 0px 0px #000066, -1px 0px 0px #000066,
-					 0px 1px 0px #000066, 0px -1px 0px #000066;
+		text-shadow: 1px 1px 0px rgb(255, 0, 128),-1px -1px 0px rgb(255, 0, 128),
+					 -1px 1px 0px rgb(255, 0, 128),1px -1px 0px rgb(255, 0, 128),
+					 1px 0px 0px rgb(255, 0, 128), -1px 0px 0px rgb(255, 0, 128),
+					 0px 1px 0px rgb(255, 0, 128), 0px -1px 0px rgb(255, 0, 128);
 					 margin: 0; 
 }
 
@@ -85,7 +91,7 @@ p.kekka{color: rgb(128, 64, 0);
 h2{color: #FF69A3;
       text-align: center;
 	  font-size: 45px;
-	  text-shadow: 3px 1px 1px  #222222;
+	  text-shadow: 3px 1px 1px  rgb(192, 192, 192);
       }
 	 
 	/*ボタン同士の距離など*/							
@@ -95,6 +101,29 @@ h2{color: #FF69A3;
 		gap: 25px;	
 	}
 	
+	
+a {
+	position: relative;
+	display: block;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 200px;
+	padding: 8px 15px;
+	color: rgb(0, 64, 128);
+	background: rgb(206, 234, 255);
+	font-weight: 600px;
+	border-radius: 30px;
+	box-shadow: 0px 5px 5px rgb(128, 128, 192);
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	margin: 0 auto;
+	}
+	
+	a:hover{
+		    border-bottom: solid 2px rgb(0, 128, 192);
+		    transform: scale(1.1)
+			}
 	
 	img.image{
 		width: 500px;
@@ -114,14 +143,14 @@ h2{color: #FF69A3;
 		  font-size: 20px;
 		     justify-content: space-around;
 		     align-items: center;
-		     max-width: 240px;
-		      padding: 8px 15px;
+		     max-width: 280px;
+		     padding: 8px 15px;
 		     color: rgb(128, 64, 0);
 		     background: #FFFF99;
 		     font-weight: 600px;
 		     border-radius: 30px;
 		     box-shadow: 0px 5px 5px rgb(255, 255, 0);
-
+			 font-family: 'M PLUS Rounded 1c', sans-serif;
 	}
 	
 	
