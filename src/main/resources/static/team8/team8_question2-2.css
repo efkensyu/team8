@@ -67,19 +67,21 @@ h2{color: rgb(255, 89, 152);
 	
 	input.button{
 
-		  position: relative;
-		     display: block;
-		  font-size: 20px;
-		     justify-content: space-around;
-		     align-items: center;
-		     max-width: 240px;
-		      padding: 8px 15px;
-		     color: rgb(128, 64, 0);
-		  background: #FFFF99;
-		     font-weight: 600px;
-		     border-radius: 30px;
-		     box-shadow: 0px 5px 5px rgb(255, 255, 0);
-			 font-family: 'M PLUS Rounded 1c', sans-serif;
+		position: relative;
+			display: block;
+			font-size: 20px;
+			justify-content: space-around;
+			align-items: center;
+			max-width: 200px;
+			width: 160px;
+			padding: 8px 15px;
+			color: rgb(128, 64, 0);
+			background: #FFFF99;
+			font-weight: 600px;
+			border-radius: 50px;
+			border: none;
+			box-shadow: 0px 5px 5px rgb(252, 209, 82);
+			font-family: 'M PLUS Rounded 1c', sans-serif;
 	}
 			
 	
